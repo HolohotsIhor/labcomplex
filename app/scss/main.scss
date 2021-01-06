@@ -4,7 +4,8 @@
 2.  General styles
 3.  Burger
 4.  Header
-5.  Form  
+5.  Form
+6.  Banner
 
 */
 
@@ -22,11 +23,13 @@ $white: #fff;
 
 body {
     color: #787878;
-    letter-spacing: 1px;
+    letter-spacing: 0;
+    line-height: 1rem;
     font-family: 'Roboto', sans-serif;
     min-width: 320px;
     max-width: 100%;
     font-size: $typography-color-standart;
+    min-height: 3000px;
 }
 
 section {
@@ -38,23 +41,22 @@ section {
     }
 }
 
-h2 {
-    font-size: 50px;
-
-    @media (min-width: 1200px) {
-        font-size: 42px;
-        line-height: 42px;
-    }
+h1, h2, h3 {
+    font-size: 1.5rem;
+     line-height: 2.7rem;
 
     @media (min-width: 992px) {
-        font-size: 27px;
-        line-height: 30px;
+        font-size: 2rem;
+        line-height: 4rem;
     }
 
-    @media (min-width: 545px) {
-        font-size: 20px;
-        line-height: 25px;
+    @media (min-width: 1200px) {
+
     }
+
+
+
+
 }
 
 img {
@@ -82,16 +84,6 @@ section {
     @media (max-device-width: 767px) {
         padding: $padding-small;
     }
-}
-
-h2 {
-    font-size: 28px;
-    line-height: 1.5;
-    margin-top: 0;
-    font-size: 1.92857rem;
-    margin-bottom: 2.14286rem;
-    color: $black;
-    font-weight: bold;
 }
 
 img {
@@ -127,10 +119,11 @@ a {
 header {
     background-color: $black;
     padding: 10px 0 0 0;
-    background-attachment: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
 
     .top_mnu {
         position: absolute;
@@ -285,8 +278,16 @@ header {
                 margin: auto;
                 z-index: 999;
                 position: absolute;
-                top: 2px;
+                top: 6px;
                 right: 15px;
+
+                @media (min-device-width: 768px) { 
+                    top: 10px;
+                }
+
+                @media (min-device-width: 992px) { 
+                    top: 20px;
+                }
             }
 
             .sw-topper {
@@ -367,14 +368,69 @@ header {
         .header__logo {
             text-align: left;
 
-            img {
-                max-width: 56px;
+            svg {
+                max-width: 30px;
+                height: auto;
                 margin-top: -5px;
+                float: left;
+
+                @media (min-width: 768px) {
+                    margin-top: -3px;
+                }
+
+                @media (min-width: 992px) {
+                    max-width: 40px;
+                }
+
+                @media (min-width: 1200px) {
+                    max-width: 45px;
+                }
+            }
+
+            h2 {
+                color: $white;
+                margin-bottom: 0;
+                letter-spacing: -1px;
+                font-weight: normal;
+
+                span {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: 0;
+                }
             }
         }
 
         .header__phone {
+            display: none;
             text-align: center;
+
+            @media (min-device-width: 768px) {
+                display: block;
+            }
+
+            a {
+                letter-spacing: -1px;
+                line-height: 2.95rem;
+                font-size: 1.2rem;
+
+                @media (min-device-width: 992px) { 
+                    font-size: 1.3rem;
+                    line-height: 4.2rem
+                }
+
+                &:nth-child(1) {
+                    margin-right: .5rem;
+
+                    @media (min-device-width: 992px) { 
+                        margin-right: 1.5rem;
+                    }
+                }
+
+                span {
+                    font-weight: bold;
+                }
+            }
         }
     }
 
@@ -797,3 +853,17 @@ textarea {
     }
 }
 */
+
+
+/* 6.  Banner */
+.banner {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0)
+    ), url(../img/banner.png);
+    background-attachment: fixed;
+    background-attachment-x: center;
+    background-attachment-y: center;
+    object-fit: cover;
+    height: 1000px;
+}
