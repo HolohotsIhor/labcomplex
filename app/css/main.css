@@ -87,7 +87,7 @@ header {
   width: 100%;
   z-index: 1; }
   header .top_mnu {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: auto;
     min-height: 100%;
