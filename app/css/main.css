@@ -6,13 +6,15 @@
 4.  Header
 5.  Form
 6.  Banner
+7.  About 
+8.  Analiz 
 
 */
 /* 1.  Fonts including */
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap");
 /* 2.  General styles */
 body {
-  color: #787878;
+  color: #000;
   letter-spacing: 0;
   line-height: 1rem;
   font-family: 'Roboto', sans-serif;
@@ -85,7 +87,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1; }
+  z-index: 99; }
   header .top_mnu {
     position: fixed;
     width: 100%;
@@ -335,16 +337,25 @@ header {
 
 /* 4.  Banner */
 .banner {
-  height: 100%;
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 0; }
+  z-index: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0))), url(../img/banner.png);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)), url(../img/banner.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)), url(../img/banner.png);
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: center;
+  -o-object-fit: cover;
+     object-fit: cover; }
   @media (min-device-width: 992px) {
     .banner {
       padding-top: 250px;
-      max-height: 100%; } }
+      padding-bottom: 250px;
+      min-height: 85%;
+      max-height: 95%; } }
   .banner .btn-w:nth-child(2) {
     margin-bottom: 1rem; }
     @media (min-device-width: 992px) {
@@ -728,14 +739,110 @@ textarea {
     }
 }
 */
-/* 6.  Banner */
-.banner {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0))), url(../img/banner.png);
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)), url(../img/banner.png);
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)), url(../img/banner.png);
-  background-attachment: fixed;
-  background-attachment-x: center;
-  background-attachment-y: center;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 1000px; }
+/* 7.  About  */
+.about p {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #000; }
+
+.about .stat-wrapp {
+  margin: 15px;
+  padding: 25px 15px;
+  border: 1px solid #777;
+  color: #000; }
+  @media (min-device-width: 992px) {
+    .about .stat-wrapp {
+      margin: 0; } }
+  .about .stat-wrapp .article-box {
+    font-size: 2rem;
+    width: 100%; }
+  .about .stat-wrapp h5 {
+    margin-bottom: 40px; }
+  .about .stat-wrapp span {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    display: inline-block; }
+  .about .stat-wrapp p {
+    font-size: 16px; }
+
+.about .btn-w {
+  border: solid 1px #000;
+  margin-top: 50px;
+  padding: 15px 90px;
+  color: #fff !important;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  background-color: #000; }
+  .about .btn-w:hover {
+    background-color: transparent;
+    color: #000 !important; }
+
+.about .item-box svg {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  margin-bottom: 1rem; }
+
+/* 8.  Analiz  */
+.analiz {
+  padding-top: 0; }
+  .analiz .owl-carousel button.owl-dot {
+    width: 30px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
+    .analiz .owl-carousel button.owl-dot:nth-child(1) {
+      position: absolute;
+      top: 40%;
+      left: 0; }
+      @media (min-device-width: 992px) {
+        .analiz .owl-carousel button.owl-dot:nth-child(1) {
+          top: 50%; } }
+    .analiz .owl-carousel button.owl-dot:nth-child(2) {
+      position: absolute;
+      top: 40%;
+      right: 0; }
+      @media (min-device-width: 992px) {
+        .analiz .owl-carousel button.owl-dot:nth-child(2) {
+          top: 50%; } }
+    .analiz .owl-carousel button.owl-dot:hover {
+      background-color: rgba(0, 0, 0, 0.8); }
+  .analiz .owl-item {
+    padding: 10px; }
+    @media (min-device-width: 992px) {
+      .analiz .owl-item .item-content {
+        min-height: 355px; } }
+    .analiz .owl-item img,
+    .analiz .owl-item source {
+      margin-bottom: 20px; }
+    .analiz .owl-item h3,
+    .analiz .owl-item p {
+      color: #000; }
+    .analiz .owl-item h3 {
+      font-size: 16px;
+      margin-bottom: 20px;
+      font-weight: bold; }
+    .analiz .owl-item p {
+      font-size: 13px;
+      line-height: 22px;
+      text-align: left; }
+    .analiz .owl-item .btn-w {
+      border: solid 1px #000;
+      margin-top: 20px;
+      padding: 8px 70px;
+      color: #000 !important;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s;
+      max-width: 100%; }
+      @media (min-device-width: 992px) {
+        .analiz .owl-item .btn-w {
+          margin-top: 50px; } }
+      .analiz .owl-item .btn-w:hover {
+        background-color: #000;
+        color: #fff !important; }

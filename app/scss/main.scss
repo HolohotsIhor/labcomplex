@@ -6,6 +6,8 @@
 4.  Header
 5.  Form
 6.  Banner
+7.  About 
+8.  Analiz 
 
 */
 
@@ -22,7 +24,7 @@ $white: #fff;
 
 
 body {
-    color: #787878;
+    color: $black;
     letter-spacing: 0;
     line-height: 1rem;
     font-family: 'Roboto', sans-serif;
@@ -43,7 +45,7 @@ section {
 
 h1, h2, h3 {
     font-size: 1.5rem;
-     line-height: 2.7rem;
+    line-height: 2.7rem;
 
     @media (min-width: 992px) {
         font-size: 2rem;
@@ -53,10 +55,6 @@ h1, h2, h3 {
     @media (min-width: 1200px) {
 
     }
-
-
-
-
 }
 
 img {
@@ -123,7 +121,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 99;
 
     .top_mnu {
         position: fixed;
@@ -437,16 +435,25 @@ header {
 
 /* 4.  Banner */
 .banner {
-    height: 100%;
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 0;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0)
+      ), url(../img/banner.png);
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: center;
+    object-fit: cover;
 
     @media (min-device-width: 992px) {
         padding-top: 250px;
-        max-height: 100%;
+        padding-bottom: 250px;
+        min-height: 85%;
+        max-height: 95%;
     }
 
     .btn-w {
@@ -855,15 +862,156 @@ textarea {
 */
 
 
-/* 6.  Banner */
-.banner {
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.45), 
-      rgba(0, 0, 0, 0)
-    ), url(../img/banner.png);
-    background-attachment: fixed;
-    background-attachment-x: center;
-    background-attachment-y: center;
-    object-fit: cover;
-    height: 1000px;
+/* 7.  About  */
+.about {
+
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+        color: $black;
+    }
+
+    .stat-wrapp {
+        margin: 15px;
+        padding: 25px 15px;
+        border: 1px solid #777;
+        color: $black;
+
+        @media (min-device-width: 992px) {
+            margin: 0;
+        }
+
+        .article-box {
+            font-size: 2rem;
+            width: 100%;
+        }
+
+        h5 {
+            margin-bottom: 40px;
+        }
+
+        span {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            display: inline-block;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .btn-w {
+        border: solid 1px $black;
+        margin-top: 50px;
+        padding: 15px 90px;
+        color: $white !important;
+        transition: .2s;
+        background-color: $black;
+
+        &:hover {
+            background-color: transparent;
+            color: $black !important;
+        }
+    }
+
+    .item-box {
+
+        svg {
+            width: 50px;
+            display: block;
+            margin: 0 auto;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+/* 8.  Analiz  */
+.analiz {
+    padding-top: 0;
+
+    .owl-carousel button.owl-dot {
+        width: 30px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: .2s;
+
+        &:nth-child(1) {
+            position: absolute;
+            top: 40%;
+            left: 0;
+
+            @media (min-device-width: 992px) {
+                top: 50%;
+            }
+        }
+
+        &:nth-child(2) {
+            position: absolute;
+            top: 40%;
+            right: 0;
+
+            @media (min-device-width: 992px) {
+                top: 50%;
+            }
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    .owl-item {
+        padding: 10px;
+
+        .item-content {
+
+            @media (min-device-width: 992px) {
+                min-height: 355px;
+            }
+        }
+
+        img,
+        source {
+            margin-bottom: 20px;
+        }
+
+        h3,
+        p {
+            color: $black;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 22px;
+            text-align: left;
+        }
+
+        .btn-w {
+            border: solid 1px $black;
+            margin-top: 20px;
+            padding: 8px 70px;
+            color: $black !important;
+            transition: .2s;
+            max-width: 100%;
+
+            @media (min-device-width: 992px) {
+                margin-top: 50px;
+            }
+
+            &:hover {
+                background-color: $black;
+                color: $white !important;
+            }
+        }
+    }
 }
