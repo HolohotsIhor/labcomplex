@@ -8,9 +8,8 @@
 6.  Banner
 7.  About 
 8.  Analiz 
-9.  Pre-footer
-10.  Footer
-11. Contact widget
+9.  Footer
+10. Contact widget
 
 */
 
@@ -990,15 +989,20 @@ textarea {
         padding: 10px;
 
         .item-content {
+            text-align: center;
 
             @media (min-device-width: 992px) {
-                min-height: 355px;
+                min-height: 280px;
             }
         }
 
         img,
-        source {
+        source,
+        svg {
             margin-bottom: 20px;
+            max-width: 150px;
+            max-height: 110px;
+            margin-bottom: 1.5rem;
         }
 
         h3,
@@ -1041,55 +1045,7 @@ textarea {
 }
 
 
-/* 9.  Pre-footer */
-.pre-footer {
-    background-color: #F2F2F5;
-    border-top: .14286rem solid #d3d8df;
-    border-bottom: .14286rem solid #d3d8df;
-    padding: 40px 0px;
-
-    h4 {
-        color: $black;
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    .article-wrapp {
-        text-align: left;
-
-        h4 {
-            padding-top: 10px;
-        }
-    }
-
-    
-    .carousel-wrapp {
-
-        .owl-carousel-bot {
-            overflow: hidden;
-
-            .owl-item {
-                float: left;
-                text-align: center;
-
-                img,
-                source {
-                    max-width: 70%;
-                    max-height: 60px;
-                    -webkit-filter: grayscale(100%);
-                    transition-property: filter;
-                    transition: .2s;
-
-                    &:hover {
-                        -webkit-filter: unset;
-                    }
-                }
-            }
-        }
-    }
-}
-
-/* 10.  Footer */
+/* 9.  Footer */
 footer {
     background-color: #F2F2F5;
     padding: 20px 0;
@@ -1161,7 +1117,7 @@ footer {
 }
 
 
-/* 11. Contact widget */
+/* 10. Contact widget */
 html.bx-ios.bx-ios-fix-frame-focus,
 .bx-ios.bx-ios-fix-frame-focus body {
     -webkit-overflow-scrolling: touch

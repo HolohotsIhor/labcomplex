@@ -8,9 +8,8 @@
 6.  Banner
 7.  About 
 8.  Analiz 
-9.  Pre-footer
-10.  Footer
-11. Contact widget
+9.  Footer
+10. Contact widget
 
 */
 /* 1.  Fonts including */
@@ -832,12 +831,18 @@ textarea {
       background-color: rgba(0, 0, 0, 0.8); }
   .analiz .owl-item {
     padding: 10px; }
-    @media (min-device-width: 992px) {
-      .analiz .owl-item .item-content {
-        min-height: 355px; } }
+    .analiz .owl-item .item-content {
+      text-align: center; }
+      @media (min-device-width: 992px) {
+        .analiz .owl-item .item-content {
+          min-height: 280px; } }
     .analiz .owl-item img,
-    .analiz .owl-item source {
-      margin-bottom: 20px; }
+    .analiz .owl-item source,
+    .analiz .owl-item svg {
+      margin-bottom: 20px;
+      max-width: 150px;
+      max-height: 110px;
+      margin-bottom: 1.5rem; }
     .analiz .owl-item h3,
     .analiz .owl-item p {
       color: #000; }
@@ -867,43 +872,7 @@ textarea {
         background-color: #000;
         color: #fff !important; }
 
-/* 9.  Pre-footer */
-.pre-footer {
-  background-color: #F2F2F5;
-  border-top: .14286rem solid #d3d8df;
-  border-bottom: .14286rem solid #d3d8df;
-  padding: 40px 0px; }
-  .pre-footer h4 {
-    color: #000;
-    font-size: 24px;
-    font-weight: bold; }
-  .pre-footer .article-wrapp {
-    text-align: left; }
-    .pre-footer .article-wrapp h4 {
-      padding-top: 10px; }
-  .pre-footer .carousel-wrapp .owl-carousel-bot {
-    overflow: hidden; }
-    .pre-footer .carousel-wrapp .owl-carousel-bot .owl-item {
-      float: left;
-      text-align: center; }
-      .pre-footer .carousel-wrapp .owl-carousel-bot .owl-item img,
-      .pre-footer .carousel-wrapp .owl-carousel-bot .owl-item source {
-        max-width: 70%;
-        max-height: 60px;
-        -webkit-filter: grayscale(100%);
-        -webkit-transition-property: -webkit-filter;
-        transition-property: -webkit-filter;
-        -o-transition-property: filter;
-        transition-property: filter;
-        transition-property: filter, -webkit-filter;
-        -webkit-transition: .2s;
-        -o-transition: .2s;
-        transition: .2s; }
-        .pre-footer .carousel-wrapp .owl-carousel-bot .owl-item img:hover,
-        .pre-footer .carousel-wrapp .owl-carousel-bot .owl-item source:hover {
-          -webkit-filter: unset; }
-
-/* 10.  Footer */
+/* 9.  Footer */
 footer {
   background-color: #F2F2F5;
   padding: 20px 0; }
@@ -940,7 +909,7 @@ footer {
       footer .item-box ul li a {
         color: #3C66A6; }
 
-/* 11. Contact widget */
+/* 10. Contact widget */
 html.bx-ios.bx-ios-fix-frame-focus,
 .bx-ios.bx-ios-fix-frame-focus body {
   -webkit-overflow-scrolling: touch; }
